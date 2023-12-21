@@ -8,7 +8,7 @@
                 <p>East London</p>
             </div>
             <div class="texts-two">
-                <p>My Profile</p>
+                <p>Admin Profile</p>
                 <p>Join Us</p>
             </div>
         </div>
@@ -21,7 +21,14 @@
         <ul class="navigators-list">
             <li>All Courses <i class="pi pi-chevron-down"></i></li>
             <li>Calendars  <i class="pi pi-chevron-down"></i></li>
-            <li>Registration System  <i class="pi pi-chevron-down"></i></li>
+            <li>Registration System  <i class="pi pi-chevron-down" (click)="clickRegistrationSystem()"></i></li>
+                <div class="registrationSystem">
+                    <ul>
+                        <li>blabla</li>
+                        <li>blabla</li>
+                        <li>blabla</li>
+                    </ul>
+                </div>
             <li>Financial <i class="pi pi-chevron-down"></i></li>
         </ul>
         <div class="icons">
@@ -34,25 +41,69 @@
 </header>
 
 
-<div class="teste">
-    adasd
+<section class="image-text">
+    <div class="text">
+        <div class="text-container">
+            <p class="first-text">THIS IS COOPER SCHOOL</p>
+            <p>Education is the best key success in life</p>
+        </div>
+    </div>
+</section>
+
+
+<section class="information-container">
+    <div class="information">
+        <div class="first-info">
+            <img src="/assets/1.png">
+            <h3>Learning & Fun</h3>
+            <p>A wide variety  of activities to stimulate language learning, such as arts and crafts, baking, music.</p>
+        </div>
+        <div class="linha"></div>
+        <div class="second-info">
+            <img src="/assets/2.png">
+            <h3>Qualified Teachers</h3>
+            <p>Our experienced teachers encourage children to question, solve problems, and express themselves creatively.</p>
+        </div>
+        <div class="linha"></div>
+        <div class="third-info">
+            <img src="/assets/3.png">
+            <h3>Healthy Meals</h3>
+            <p>Organic food, fresh water, and juice delivered to the kindergarten are avaiable every day.</p>
+        </div>
+    </div>
+</section>
+
+<div class="section-footer">
+    <div class="footer-container">
+        <div class="text-with-logo">
+            <img src="/assets/logo.png" class="logo2">
+            <div class="linha2"></div>
+            <p>CooperSchool provides learning opportunities that increase children's potential.</p>
+        </div>
+
+        <div class="email">
+            <h3>EMAIL</h3>
+            <p class="title-text">admin-cooperschool.org</p>
+        </div>
+
+        <div class="phone2">
+            <h3>PHONE</h3>
+            <p class="title-text">+1 (409) 987–5874</p>
+        </div>
+
+        <div class="address">
+            <h3>ADDRESS</h3>
+            <p class="title-text">3042 Richmond hwy, London, VA, 2245.</p>
+        </div>
+
+    </div>
 </div>
 
+<footer>
+    <p>CooperSchool © 2023. Privacy Policy.</p>
+</footer>
 
 
-test
+<!-- 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-<button (click)="visualizar()">Visualizar matrículas</button>
+<button (click)="visualizar()">Visualizar matrículas</button> -->

@@ -24,9 +24,12 @@ visualizar(){
 }
 
 
-options:string = 'cities';
+registrationSystem:boolean = false;
 
+clickRegistrationSystem(){
+  this.registrationSystem = true; 
 }
 
 
 
+}
