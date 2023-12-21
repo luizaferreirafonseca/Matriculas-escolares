@@ -1,0 +1,31 @@
+<h2>Tabela de Alunos</h2>
+  
+<table>
+  <thead>
+    <tr>
+      <th>Aluno</th>
+      <th>Ações</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let aluno of alunos">
+      <td>{{aluno.nome}}</td>
+      <td>
+        <button (click)="visualizarAluno(aluno.id)">Visualizar</button>
+        <button (click)="remover(aluno.id?? 0)">Remover</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+
+<form [formGroup]="formulario">
+    <input type="text" formControlName="nome" placeholder="Nome">
+    <input type="number" formControlName="matricula" placeholder="Matricula">
+    <input type="number" formControlName="idade" placeholder="Idade">
+    <input type="text" formControlName="endereco" placeholder="Endereço">
+    <input type="number" formControlName="telefone" placeholder="Telefone">
+    <input type="text" formControlName="media1" placeholder="Média 1">
+    <input type="text" formControlName="media2" placeholder="Média 2">
+    <input type="submit" value="Cadastrar" (click)="cadastrar()">
+</form>

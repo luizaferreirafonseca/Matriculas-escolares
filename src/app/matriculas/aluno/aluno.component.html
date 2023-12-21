@@ -1,0 +1,26 @@
+<p>{{aluno.nome}}</p>
+<p>{{aluno.idade}}</p>
+<p>{{aluno.endereco}}</p>
+<p>{{aluno.telefone}}</p>
+<p>{{aluno.media1}}</p>
+<p>{{aluno.media2}}</p>
+
+<form [formGroup]="formulario">
+    <label>Nome</label>
+        <input type="text" formControlName="nome" placeholder="Nome"> 
+    <label>Matrícula</label>
+        <input type="text" formControlName="matricula" placeholder="Matricula"> 
+    <label>Idade</label>
+        <input type="number" formControlName="idade" placeholder="Idade">
+    <label>Endereco</label>
+        <input type="text" formControlName="endereco" placeholder="Endereco"> 
+    <label>Telefone</label>
+        <input type="number" formControlName="telefone" placeholder="Telefone"> 
+    <label>Média 1</label>
+        <input type="text" formControlName="media1" placeholder="Média 1"> 
+    <label>Média 2</label>
+        <input type="text" formControlName="media2" placeholder="Média 2">  
+
+        <button (click)="atualizarAluno()">Enviar</button>
+        <button (click)="voltarPaginaMatricula()">Voltar</button>
+</form>
