@@ -13,30 +13,29 @@
             </div>
         </div>
 
-    <div class="second-header">
-        <div class="logo-and-name">
-            <img src="/assets/logo.png" class="logo-img">
-            <p>Cooper</p>
-        </div>
-        <ul class="navigators-list">
-            <li>All Courses <i class="pi pi-chevron-down"></i></li>
-            <li>Calendars  <i class="pi pi-chevron-down"></i></li>
-            <li>Registration System  <i class="pi pi-chevron-down" (click)="clickRegistrationSystem()"></i></li>
-                <div class="registrationSystem">
+        <div class="second-header">
+            <div class="logo-and-name">
+                <img src="/assets/logo.png" class="logo-img">
+                <p>Cooper</p>
+            </div>
+            <ul class="navigators-list">
+                <li *ngFor="let item of menuItems" (mouseleave)="ocultMenus()" >
+                  {{item.name}}
+                  <i class="pi pi-chevron-down" (mouseover)="clickOpenMenu(item.name)"></i>
+                  <div *ngIf="item.isOpen" class="registrationSystem">
                     <ul>
-                        <li>blabla</li>
-                        <li>blabla</li>
-                        <li>blabla</li>
+                      <li  *ngFor="let subItem of item.subItems" (click)="visualizar(subItem.path)" > {{subItem.name
+                        }}</li>
                     </ul>
-                </div>
-            <li>Financial <i class="pi pi-chevron-down"></i></li>
-        </ul>
-        <div class="icons">
-            <i class="pi pi-facebook"></i>
-            <i class="pi pi-instagram"></i>
-            <i class="pi pi-map-marker"></i>
+                  </div>
+                  </li>
+            </ul>
+            <div class="icons">
+                <i class="pi pi-facebook"></i>
+                <i class="pi pi-instagram"></i>
+                <i class="pi pi-map-marker"></i>
+            </div>
         </div>
-    </div>
     
 </header>
 
@@ -82,17 +81,17 @@
         </div>
 
         <div class="email">
-            <h3>EMAIL</h3>
+            <p class="title_email">EMAIL</p>
             <p class="title-text">admin-cooperschool.org</p>
         </div>
 
         <div class="phone2">
-            <h3>PHONE</h3>
+            <p class="title_phone">PHONE</p>
             <p class="title-text">+1 (409) 987–5874</p>
         </div>
 
         <div class="address">
-            <h3>ADDRESS</h3>
+            <p class="title_address">ADDRESS</p>
             <p class="title-text">3042 Richmond hwy, London, VA, 2245.</p>
         </div>
 

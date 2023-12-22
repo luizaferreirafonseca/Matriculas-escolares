@@ -7,6 +7,9 @@
   @import "primeng/resources/primeng.css";
   @import "primeicons/primeicons.css";
 
+
+
+
   body {
     font-family: 'Poppins', sans-serif;
     font-weight: 300;
@@ -22,3 +25,4 @@
  .text-container{
   font-family: 'Poppins', sans-serif;
  }
+

@@ -73,15 +73,22 @@ height: 40px;
     padding-top: 10px;
 }
 
-.navigators-list > li:nth-child(3){
+.navigators-list li{
     position: relative;
     cursor: pointer;
+    font-weight: 400;
 }
+
+.navigators-list li:hover{
+    color: rgb(197, 9, 9);
+}
+
 
 .registrationSystem{
     position:absolute; 
     background-color: #fff;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); 
+    width: 100%;
 
 
 }
@@ -90,13 +97,22 @@ height: 40px;
     list-style: none;
     padding: 0;
     margin: 0;
+    width: 100%;
     
 }
 
 .registrationSystem li {
     padding: 10px;
     border-bottom: 1px solid #ddd; /* linha separadora entre itens do submenu */
+    font-size: 0.8rem;
+    font-weight: 300;
 }
+
+
+.registrationSystem li:hover{
+color: rgb(14, 4, 127);
+}
+
 
 .navigators-list > li:nth-child(3):hover .registrationSystem {
     display: block;
@@ -112,9 +128,16 @@ padding: 5px;
 color: rgb(19, 6, 117);
 font-weight: bold;
 margin-left: 10px;
+transition: transform 0.3s;
+cursor: pointer;
 
 
 }
+
+.icons i:hover{
+    transform: scale(1.5);
+}
+
 
 .image-text{
     background-image: url('/assets/background.png');
@@ -177,6 +200,7 @@ margin-left: 10px;
 
 }
 
+
 .second-info{
     display: flex;
     flex-direction: column;
@@ -237,6 +261,21 @@ margin-left: 10px;
     font-size: 0.8rem;
     width: 30%;
     padding-bottom: 30px;
+}
+
+.title_phone{
+    font-size: 1.1rem;
+    font-weight: 400;
+}
+
+.title_address{
+    font-size: 1.1rem;
+    font-weight: 400;
+}
+
+.title_email{
+    font-size: 1.1rem;
+    font-weight: 400;
 }
 
 .address{

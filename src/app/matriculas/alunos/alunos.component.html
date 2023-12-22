@@ -1,31 +1,154 @@
-<h2>Tabela de Alunos</h2>
-  
-<table>
-  <thead>
-    <tr>
-      <th>Aluno</th>
-      <th>Ações</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr *ngFor="let aluno of alunos">
-      <td>{{aluno.nome}}</td>
-      <td>
-        <button (click)="visualizarAluno(aluno.id)">Visualizar</button>
-        <button (click)="remover(aluno.id?? 0)">Remover</button>
-      </td>
-    </tr>
-  </tbody>
+<router-outlet></router-outlet>
+<header>
+    <div class="first-header">
+        <div class="texts-one">
+            <div class="phone">
+                <i class="pi pi-whatsapp"></i>
+                <p>+432 154 685 325</p>
+            </div>
+            <p>East London</p>
+        </div>
+        <div class="texts-two">
+            <p>Admin Profile</p>
+            <p>Join Us</p>
+        </div>
+    </div>
+
+    <div class="second-header">
+        <div class="logo-and-name">
+            <img src="/assets/logo.png" class="logo-img">
+            <p>Cooper</p>
+        </div>
+        <ul class="navigators-list">
+            <li *ngFor="let item of menuItems" (mouseleave)="ocultMenus()" >
+              {{item.name}}
+              <i class="pi pi-chevron-down" (mouseover)="clickOpenMenu(item.name)"></i>
+              <div *ngIf="item.isOpen" class="registrationSystem">
+                <ul>
+                  <li  *ngFor="let subItem of item.subItems" (click)="visualizar(subItem.path)" > {{subItem.name
+                    }}</li>
+                </ul>
+              </div>
+              </li>
+        </ul>
+        <div class="icons">
+            <i class="pi pi-facebook"></i>
+            <i class="pi pi-instagram"></i>
+            <i class="pi pi-map-marker"></i>
+        </div>
+    </div>
+
+</header>
+
+<div class="line"></div>
+
+
+<section>
+<div class="welcome">
+    <p class="text-admin">Administrator</p>
+    <div class="welcome-name">
+        <div class="textos">
+            <p class="text-welcome">Welcome,</p>
+            <p>Luiza</p>
+        </div>
+        
+        <img src="/assets/me.jpg" class="my_photo">
+    </div>
+</div>
+<div class="line2"></div>
+
+<div class="title-student">
+    <p class="text-admin">Students</p>
+</div>
+
+ <table>
+    <thead>
+        <tr>
+            <th>Students</th>
+            <th>Registers</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let aluno of alunos">
+            <td class="nomes-matriculas">{{aluno.nome}}</td>
+            <td class="nomes-matriculas">{{aluno.matricula}}</td>
+            <td class="actions-column">
+                <button (click)="visualizarAluno(aluno.id)" class="btns-principais">View</button>
+                <button (click)="remover(aluno.id)" class="btns-principais">Delete</button>
+            </td>
+        </tr>
+    </tbody>
 </table>
 
+<div class="forms">
+    <div class="post">
+        <img src="/assets/beca.png" class="photo-beca">
+        <p>Register new students</p>
+    </div>
+    <form [formGroup]="formulario">
+        <label for="nome">Name:</label>
+        <input type="text" formControlName="nome">
 
-<form [formGroup]="formulario">
-    <input type="text" formControlName="nome" placeholder="Nome">
-    <input type="number" formControlName="matricula" placeholder="Matricula">
-    <input type="number" formControlName="idade" placeholder="Idade">
-    <input type="text" formControlName="endereco" placeholder="Endereço">
-    <input type="number" formControlName="telefone" placeholder="Telefone">
-    <input type="text" formControlName="media1" placeholder="Média 1">
-    <input type="text" formControlName="media2" placeholder="Média 2">
-    <input type="submit" value="Cadastrar" (click)="cadastrar()">
-</form>
+        <label for="matricula">Register:</label>
+        <input type="text" formControlName="matricula">
+
+        <label for="idade">Age:</label>
+        <input type="number" formControlName="idade">
+
+        <label for="endereco">Address:</label>
+        <input type="text" formControlName="endereco">
+
+        <label for="telefone">Telephone:</label>
+        <input type="text" formControlName="telefone" >
+
+        <label for="media1">Student's Average 1:</label>
+        <input type="text" formControlName="media1">
+
+        <label for="media2">Student's Average 2:</label>
+        <input type="text" formControlName="media2">
+
+        <button  type="submit" (click)="cadastrar()">Register</button>
+    </form>
+
+</div>
+ 
+
+
+
+
+</section>
+
+
+
+
+
+<div class="section-footer">
+  <div class="footer-container">
+      <div class="text-with-logo">
+          <img src="/assets/logo.png" class="logo2">
+          <div class="linha2"></div>
+          <p>CooperSchool provides learning opportunities that increase children's potential.</p>
+      </div>
+
+      <div class="email">
+          <h3>EMAIL</h3>
+          <p class="title-text">admin-cooperschool.org</p>
+      </div>
+
+      <div class="phone2">
+          <h3>PHONE</h3>
+          <p class="title-text">+1 (409) 987–5874</p>
+      </div>
+
+      <div class="address">
+          <h3>ADDRESS</h3>
+          <p class="title-text">3042 Richmond hwy, London, VA, 2245.</p>
+      </div>
+
+  </div>
+</div>
+
+<footer>
+  <p>CooperSchool © 2023. Privacy Policy.</p>
+</footer>

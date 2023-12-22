@@ -41,7 +41,7 @@ remover(id:number):Observable<Aluno[]>{
 }
 
 
-cadastrar(obj:NovoAluno):Observable<NovoAluno>{
+cadastrar(obj:NovoAluno):Observable<Aluno>{
   return this.http.post<Aluno>(this.url, obj)
 }
 
