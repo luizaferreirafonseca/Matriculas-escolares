@@ -366,3 +366,202 @@ footer p{
     padding: 15px;
     opacity: calc(60%);
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media  (min-width: 790px) and (max-width: 896px){
+
+    .navigators-list{
+        font-size: 1rem;
+        gap: 15px;
+    }
+    
+    }
+    
+    @media  (min-width: 470px) and (max-width: 789px){
+    .navigators-list{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 8px;
+    }
+    
+   
+
+    .section-footer{
+        padding-top: 10%;
+        padding-bottom: 10%;
+    
+    }
+    
+    .footer-container{
+        display: block;
+        gap: 20px;
+        width: 100%;
+    
+    }
+    
+    .text-with-logo{
+        width: 100%;
+        padding-bottom: 40px;
+    }
+    
+    
+    .email{
+        width: 50%;
+        padding-right: 20px;
+    }
+    
+    .phone2{
+        width: 50%;
+    }
+    
+    .address{
+        width: 50%;
+    }
+
+   
+
+
+
+    form{
+      width: 70%;
+      margin-top: 20px;
+    }
+
+    .update{
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+
+
+
+    th, td{
+        padding: 5px;
+        font-size: 0.8rem;
+    }
+
+
+}
+   
+
+
+    @media  (min-width: 390px) and (max-width: 469px){
+        .navigators-list{
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            font-size: 0.9rem;
+            padding-left: 30px;
+        }
+
+        th, td{
+            padding: 5px;
+            font-size: 0.8rem;
+        }
+    
+        .navigators-list i{
+            font-size: 0.8rem;
+        }
+
+        .first-header{
+            width: 110vW;
+        }
+     
+        footer{
+            width: 110vW;
+        }
+
+        form{
+            width: 70%;
+            margin-top: 20px;
+          }
+      
+          .update{
+              margin-top: 30px;
+              margin-bottom: 30px;
+          }
+      
+
+          .update-title{
+            padding: 8px;
+          }
+
+        .icons{
+            display: flex;
+            flex-direction: column;
+        }
+    
+        .first-header{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-size: 0.6rem;
+            padding-bottom: 10px;
+        }
+    
+        .text-one {
+            justify-content: space-around;
+        }
+    
+    
+    
+        .section-footer{
+            padding-top: 10%;
+            padding-bottom: 10%;
+    
+        }
+    
+        .footer-container{
+            display: block;
+            gap: 20px;
+            width: 100%;
+    
+        }
+    
+        .text-with-logo{
+            width: 100%;
+            padding-bottom: 40px;
+        }
+        
+    
+        .email{
+            width: 50%;
+            padding-right: 20px;
+        }
+    
+        .phone2{
+            width: 50%;
+        }
+    
+        .address{
+            width: 50%;
+        }
+    }
