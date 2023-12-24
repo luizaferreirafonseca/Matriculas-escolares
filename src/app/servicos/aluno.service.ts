@@ -10,7 +10,7 @@ import { NovoAluno } from '../matriculas/alunos/Modelos/NovoAluno';
 export class AlunoService {
 
 
-  private url:string = 'http://localhost:3000/alunos'; 
+  private url:string = 'https://students-registers.glitch.me/alunos'; 
 
   constructor(private http:HttpClient) { }
 
