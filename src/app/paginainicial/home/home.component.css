@@ -400,7 +400,14 @@ footer p{
     padding-left: 20px;
 }
 
+.navigators-list li {
+    z-index: 1;
+}
 
+.registrationSystem{
+    z-index: 50;
+    background-color: white;
+}
 
 
 }
