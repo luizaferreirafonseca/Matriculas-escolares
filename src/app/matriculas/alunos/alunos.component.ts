@@ -3,7 +3,7 @@ import { Aluno } from './Modelos/Aluno';
 import { AlunoService } from '../../servicos/aluno.service';
 import { CommonModule } from '@angular/common';
 import { Router, RouterOutlet } from '@angular/router';
-import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
+import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { NovoAluno } from './Modelos/NovoAluno';
 
 interface IMenuItem{
@@ -104,13 +104,13 @@ export class AlunosComponent {
 
 
  formulario = new FormGroup({
-  nome: new FormControl(''),
-  matricula: new FormControl(''),
+  nome: new FormControl('', [Validators.required]), 
+  matricula: new FormControl(0, [Validators.minLength(5), Validators.pattern(/^[0-9]+$/)]),
   idade: new FormControl(''),
-  endereco: new FormControl(''),
-  telefone: new FormControl(''),
-  media1: new FormControl(''),
-  media2: new FormControl(''),
+  endereco: new FormControl('', [Validators.required]), 
+  telefone: new FormControl(0, [Validators.required]),
+  media1: new FormControl(0, [Validators.required, Validators.maxLength(2)]),
+  media2: new FormControl(0, [Validators.required, Validators.maxLength(2)]),
 
  })
 

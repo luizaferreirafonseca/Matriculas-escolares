@@ -225,6 +225,15 @@ tr:hover {
     color: #a2120d;
 }
 
+.error{
+    color: #d20909;
+    font-size: 0.8rem;
+    margin-top: 0;
+    margin-bottom: 5px;
+    font-weight: 400;
+    
+}
+
 
 .btns-principais{
     padding: 10px;
@@ -303,7 +312,7 @@ label {
 input {
     width: 100%;
     padding: 8px;
-    margin-bottom: 16px;
+    margin-bottom: 7px;
     box-sizing: border-box;
     border: 1px solid #720808db;
     border-radius: 4px;
