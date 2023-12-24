@@ -82,27 +82,27 @@
     <form [formGroup]="formulario">
         <label>Name</label>
             <input type="text" formControlName="nome" placeholder="Nome"> 
-            <p *ngIf="formulario.get('nome')?.touched && formulario.get('nome')?.hasError('required')" class="error">O nome precisa ser informado.</p>
+            <p *ngIf="formulario.get('nome')?.touched && formulario.get('nome')?.hasError('required')" class="error">Enter a name.</p>
         <label>Register</label>
             <input type="text" formControlName="matricula" placeholder="Matricula"> 
-            <p *ngIf="formulario.get('matricula')?.touched && formulario.get('matricula')?.hasError('pattern')" class="error">Informe apenas números.</p>
-            <p *ngIf="formulario.get('matricula')?.touched && formulario.get('matricula')?.hasError('minlength')" class="error">Informe os números corretamente.</p>
+            <p *ngIf="formulario.get('matricula')?.touched && formulario.get('matricula')?.hasError('pattern')" class="error">Use only numbers.</p>
+            <p *ngIf="formulario.get('matricula')?.touched && formulario.get('matricula')?.hasError('minlength')" class="error">Enter the numbers correctly.</p>
         <label>Age</label>
             <input type="number" formControlName="idade" placeholder="Idade">
         <label>Address</label>
             <input type="text" formControlName="endereco" placeholder="Endereco"> 
-            <p *ngIf="formulario.get('endereco')?.touched && formulario.get('endereco')?.hasError('required')" class="error">O endereço precisa ser informado.</p>
+            <p *ngIf="formulario.get('endereco')?.touched && formulario.get('endereco')?.hasError('required')" class="error">Enter an address.</p>
         <label>Telephone</label>
             <input type="number" formControlName="telefone" placeholder="Telefone"> 
-            <p *ngIf="formulario.get('telefone')?.touched && formulario.get('telefone')?.hasError('required')" class="error">O telefone precisa ser informado.</p>
+            <p *ngIf="formulario.get('telefone')?.touched && formulario.get('telefone')?.hasError('required')" class="error">Enter a telephone.</p>
         <label>Student's Average 1</label>
             <input type="text" formControlName="media1" placeholder="Média 1">
-            <p *ngIf="formulario.get('media1')?.touched && formulario.get('media1')?.hasError('required')" class="error">A Média 1 precisa ser informada.</p> 
-            <p *ngIf="formulario.get('media1')?.touched && formulario.get('media1')?.hasError('maxlength')" class="error">Informe apenas 2 números.</p>
+            <p *ngIf="formulario.get('media1')?.touched && formulario.get('media1')?.hasError('required')" class="error">Enter the average.</p> 
+            <p *ngIf="formulario.get('media1')?.touched && formulario.get('media1')?.hasError('maxlength')" class="error">Enter only two numbers.</p>
         <label>Student's Average 2</label>
             <input type="text" formControlName="media2" placeholder="Média 2">  
-            <p *ngIf="formulario.get('media2')?.touched && formulario.get('media2')?.hasError('required')" class="error">A Média 2 precisa ser informada.</p>
-            <p *ngIf="formulario.get('media2')?.touched && formulario.get('media2')?.hasError('maxlength')" class="error">Informe apenas 2 números.</p>
+            <p *ngIf="formulario.get('media2')?.touched && formulario.get('media2')?.hasError('required')" class="error">Enter the average.</p>
+            <p *ngIf="formulario.get('media2')?.touched && formulario.get('media2')?.hasError('maxlength')" class="error">Enter only two numbers.</p>
     
             <button (click)="atualizarAluno()">SEND</button>
             <button (click)="voltarPaginaMatricula()">BACK</button>
