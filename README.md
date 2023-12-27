@@ -1,27 +1,39 @@
-# MatriculasAlunos
+<h1 align="center">:file_cabinet: CRUD - MATRICULAS ESCOLARES.md</h1>
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.0.6.
+## :memo: Descrição
+Este é um projetinho pessoal desenvolvido a fim de treinar o CRUD em Angular. 
 
-## Development server
+## 💻 Link Deploy: https://students-registers.netlify.app/alunos
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## :books: Funcionalidades
+A página foi desenvolvida com responsividade para telas menores.
 
-## Code scaffolding
+A página Home possui um Menu com opções de escolhas de direcionamento pra novas rotas (especificamente apenas uma por enquanto) e também um rodapé com informações sobre a empresa escolar.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Ao clicar em "Registration System" e "Students" logo em seguida, pdoemos visualizar diversos alunos cadastrados no sistema do Administrador. Todos os alunos aparecem por meio do método 'get' da minha API feita em Node.js. 
 
-## Build
+Possui um formulário abaixo para cadastrar novos alunos utilizando o método 'post'. 
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Ao clicar no botão "View", podemos visualizar as informações individuais de cada aluno e editá-las por meio do método 'put'. 
 
-## Running unit tests
+Ao clicar no botão "Delete", podemos remover um aluno do sistema.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Outras funcionalidades foram adicionadas, como os Validators nos formulários. 
 
-## Running end-to-end tests
+O uso de Diretivas e ReactiveForms foram utilizados.
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+O projeto foi desenvolvido com responsividade e ainda está tendo alguns retoques finais.
 
-## Further help
+## :wrench: Tecnologias utilizadas
+* HTML
+* CSS
+* Node.js
+* Typescript
+* Framework Angular
+  
+## :dart: Status do projeto
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+-> Em desenvolvimento para novas funcionalidades e incrementações de melhores perfomances, como: melhor componentização e o uso também de conteúdos aprendidos recentemente como a comunicação entre componentes pai e filho com o Property Binding.
+
+OBS: Para um projeto futuro, pretendo adicionar novas funcionalidades.
+
