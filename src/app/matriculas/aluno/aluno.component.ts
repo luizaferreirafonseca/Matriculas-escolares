@@ -112,7 +112,9 @@ aluno:Aluno = {
   endereco: "", 
   telefone: 0, 
   media1: 0, 
-  media2: 0 
+  media2: 0,
+  seriesName: "",
+  ensinoMedio: false
 
 }
 
@@ -126,6 +128,8 @@ endereco:  new FormControl('', [Validators.required]),
 telefone:  new FormControl(0, [Validators.required]), 
 media1: new FormControl(0, [Validators.required, Validators.maxLength(2)]), 
 media2: new FormControl(0, [Validators.required, Validators.maxLength(2)]), 
+seriesName: new FormControl(''),
+ensinoMedio: new FormControl()
 
 })
 
@@ -136,6 +140,7 @@ ngOnInit(){
   this.servico.pegarPeloId(this.id)
   .subscribe(dadosAluno => {
     this.aluno = dadosAluno
+    console.log(dadosAluno)
     this.formulario.setValue({
       nome: dadosAluno.nome, 
       matricula: dadosAluno.matricula,
@@ -143,7 +148,9 @@ ngOnInit(){
       endereco: dadosAluno.endereco,
       telefone: dadosAluno.telefone,
       media1: dadosAluno.media1, 
-      media2: dadosAluno.media2
+      media2: dadosAluno.media2,
+      seriesName: dadosAluno.seriesName,
+      ensinoMedio: dadosAluno.ensinoMedio
     })
     
   });

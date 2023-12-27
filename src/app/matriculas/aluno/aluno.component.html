@@ -62,6 +62,7 @@
             <th>Telephone</th>
             <th>Student's Average 1</th>
             <th>Student's Average 2</th>
+            <th>Grade</th>
         </tr>
     </thead>
     <tbody>
@@ -72,6 +73,7 @@
             <td>{{aluno.telefone}}</td>
             <td>{{aluno.media1}}</td>
             <td>{{aluno.media2}}</td>
+            <td>{{aluno.seriesName}}</td>
         </tr>
     </tbody>
 </table>
@@ -103,6 +105,9 @@
             <input type="text" formControlName="media2" placeholder="Média 2">  
             <p *ngIf="formulario.get('media2')?.touched && formulario.get('media2')?.hasError('required')" class="error">Enter the average.</p>
             <p *ngIf="formulario.get('media2')?.touched && formulario.get('media2')?.hasError('maxlength')" class="error">Enter only two numbers.</p>
+        <select formControlName="seriesName">
+            <option></option>
+        </select>
     
             <button (click)="atualizarAluno()">SEND</button>
             <button (click)="voltarPaginaMatricula()">BACK</button>

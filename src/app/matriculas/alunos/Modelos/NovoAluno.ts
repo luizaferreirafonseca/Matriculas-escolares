@@ -6,4 +6,6 @@ export interface NovoAluno {
     telefone?: number; 
     media1?: number; 
     media2?: number; 
+    seriesName?: string;
+    ensinoMedio?: boolean;
 }
