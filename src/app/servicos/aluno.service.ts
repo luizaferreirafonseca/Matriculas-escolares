@@ -3,6 +3,7 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Aluno } from '../matriculas/alunos/Modelos/Aluno';
 import { NovoAluno } from '../matriculas/alunos/Modelos/NovoAluno';
+import { Serie } from '../matriculas/alunos/Modelos/Series';
 
 @Injectable({
   providedIn: 'root'
@@ -11,6 +12,8 @@ export class AlunoService {
 
 
   private url:string = 'https://students-registers.glitch.me/alunos'; 
+  // private url:string = 'http://localhost:3000/alunos'; 
+  private urlSeries:string = 'http://localhost:3000/series';
 
   constructor(private http:HttpClient) { }
 
@@ -20,6 +23,10 @@ export class AlunoService {
 
   pegarAlunos():Observable<Aluno[]>{
     return this.http.get<Aluno[]>(this.url);
+  }
+
+  pegarSeries():Observable<Serie[]>{
+    return this.http.get<Serie[]>(this.urlSeries); 
   }
 
   pegarPeloId(id:number):Observable<Aluno>{

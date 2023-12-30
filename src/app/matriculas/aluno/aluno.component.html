@@ -105,10 +105,12 @@
             <input type="text" formControlName="media2" placeholder="Média 2">  
             <p *ngIf="formulario.get('media2')?.touched && formulario.get('media2')?.hasError('required')" class="error">Enter the average.</p>
             <p *ngIf="formulario.get('media2')?.touched && formulario.get('media2')?.hasError('maxlength')" class="error">Enter only two numbers.</p>
-        <select formControlName="seriesName">
-            <option></option>
+        <!-- <select formControlName="seriesName">
+            <option *ngFor="let serie of series">{{serie.nome}}</option>
         </select>
-    
+        <label>Ensino Médio
+        <input type="radio" formControlName="ensinoMedio"  [checked]="formulario.get('ensinoMedio')?.value" [disabled]="true">
+        </label> -->
             <button (click)="atualizarAluno()">SEND</button>
             <button (click)="voltarPaginaMatricula()">BACK</button>
     </form>

@@ -4,6 +4,7 @@ import { ActivatedRoute, Router, RouterLink, RouterOutlet } from '@angular/route
 import { AlunoService } from '../../servicos/aluno.service';
 import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { CommonModule } from '@angular/common';
+import { Serie } from '../alunos/Modelos/Series';
 
 interface IMenuItem{
   name:string, 
@@ -118,7 +119,7 @@ aluno:Aluno = {
 
 }
 
-
+series:Serie[] = []; 
 
 formulario = new FormGroup({
 nome: new FormControl('', [Validators.required]), 
@@ -128,8 +129,8 @@ endereco:  new FormControl('', [Validators.required]),
 telefone:  new FormControl(0, [Validators.required]), 
 media1: new FormControl(0, [Validators.required, Validators.maxLength(2)]), 
 media2: new FormControl(0, [Validators.required, Validators.maxLength(2)]), 
-seriesName: new FormControl(''),
-ensinoMedio: new FormControl()
+// seriesName: new FormControl(''),
+// ensinoMedio: new FormControl()
 
 })
 
@@ -149,11 +150,14 @@ ngOnInit(){
       telefone: dadosAluno.telefone,
       media1: dadosAluno.media1, 
       media2: dadosAluno.media2,
-      seriesName: dadosAluno.seriesName,
-      ensinoMedio: dadosAluno.ensinoMedio
+      // seriesName: dadosAluno.seriesName,
+      // ensinoMedio: dadosAluno.ensinoMedio
     })
     
   });
+
+  this.servico.pegarSeries()
+  .subscribe(dadosSerie => this.series = dadosSerie)
 
 }
 
