@@ -3,7 +3,7 @@
 ## :memo: Descrição
 Este é um projetinho pessoal desenvolvido a fim de treinar o CRUD em Angular. 
 
-## 💻 Link Deploy: https://students-registers.netlify.app/alunos
+## 💻 Link Deploy: https://students-registers.netlify.app/
 
 ## :books: Funcionalidades
 A página foi desenvolvida com responsividade para telas menores.
